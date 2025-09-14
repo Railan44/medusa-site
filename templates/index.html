@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medusa</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <nav class="menu_site">
+        <div class="quadrado_btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <img src="{{ url_for('static', filename='img/medusa-logo.png') }}" alt="Logo" class="Logo">
+
+        <form action="" method="post" class="busca_site">
+            <input type="text" class="busca_input" placeholder="Pesquisar" name="pesquisa">
+            <button class="busca_btn" type="submit">
+                <img src="{{ url_for('static', filename='img/procurar.png') }}" alt="">
+            </button>
+        </form>
+        <!--opcao usuario. tenho que por links de outras paginas para a api flask-->
+        <div class="usuario_menu">
+            <img src="{{ url_for('static', filename='img/video.png') }}" alt="" class="icone">
+            <img src="{{ url_for('static', filename='img/grid.png') }}" alt="" class="icone">
+            <img src="{{ url_for('static', filename='img/sininho.png') }}" alt="" class="icone">
+        </div>
+        <!--fim usuario-->
+           
+        <!--usuario perfil-->
+        <div class="usuario-perfil">
+             <img src="{{ url_for('static', filename='img/perfil.png') }}" alt="inicio">
+        </div>
+    </nav>
+    <!--barra lateral-->
+<div class="traco_lateral">
+    {% for link in links %}
+        <a href="{{ link.url }}" class="links">
+            <img src="{{ link.img }}" alt="">{{ link.text }}
+        </a>
+        {% if loop.index == 4 %}
+        <hr class="divisor">
+        {% endif %}
+    {% endfor %}
+</div>
+
+
+
+</body>
+</html>
+
+

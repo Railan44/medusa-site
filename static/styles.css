@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+body {
+    background: #f0f0f0;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+}
+
+/* Menu */
+.menu_site {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 2.5vw;
+    z-index: 1000;
+}
+
+/* Botão de menu estilo YouTube */
+.quadrado_btn {
+    width: 30px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.quadrado_btn span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    border-radius: 2px;
+}
+
+/* Logo */
+.Logo {
+    height: 60px; /* altura ajustada pra ficar proporcional */
+    margin: 0 30px;
+}
+
+/* Barra de busca */
+.busca_site {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    max-width: 500px;
+    width: 50%;
+    margin: 0 auto; /* centraliza horizontalmente */
+}
+
+
+
+.busca_input {
+    flex: 1;
+    max-width: 400px; /* define largura máxima */
+    padding: 5px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background: #fff;
+    text-transform: capitalize;
+}
+
+.busca_btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    
+}
+
+.busca_btn img {
+    width: 18px;
+    height: auto;
+    
+}
+/* usuario menu*/
+
+.usuario_menu{
+    height: 35px;
+    display: flex;
+    margin-left: auto;
+    cursor: pointer;
+}
+.usuario_menu .icone{
+    height: 70%;
+    margin-right: 30px;
+    cursor: pointer;
+    
+}
+.usuario-perfil{
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    
+}
+.usuario-perfil img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+
+}
+
+.traco_lateral{
+    position: fixed;
+    top: 60px;
+    left: 0;
+    min-width: 250px;
+    width: 250px;
+    height: calc(100vh - 60px);
+    background: #fff;
+    padding-right: 10px;
+}
+.links{
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    color: #000;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.links img{
+    height: 20px;
+    margin-right: 20px;
+}
+
+.links:hover,
+.links.ativo{
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.divisor {
+    margin: 0;       /* Remove qualquer espaço extra */
+    border: none;    /* Remove a linha padrão, se quiser */
+    height: 1px;     /* Se quiser deixar uma linha fina */
+    background: #ccc; /* Cor da linha */
+}
+

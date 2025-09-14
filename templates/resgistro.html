@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thumbnail estilo YouTube</title>
+<style>
+  .video-card {
+    width: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    cursor: pointer;
+    position: relative;
+    font-family: sans-serif;
+  }
+
+  .video-card img {
+    width: 100%;
+    display: block;
+  }
+
+  .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background: rgba(0,0,0,0.6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .play-button::after {
+    content: '';
+    border-style: solid;
+    border-width: 12px 0 12px 20px;
+    border-color: transparent transparent transparent white;
+    margin-left: 5px;
+  }
+
+  .video-info {
+    padding: 10px;
+  }
+
+  .video-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .video-channel {
+    font-size: 14px;
+    color: gray;
+  }
+
+  .video-card:hover {
+    transform: scale(1.03);
+    transition: transform 0.2s;
+  }
+</style>
+</head>
+<body>
+
+<div class="video-card">
+  <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg" alt="Thumbnail">
+  <div class="play-button"></div>
+  <div class="video-info">
+    <div class="video-title">Título do vídeo</div>
+    <div class="video-channel">Canal do vídeo</div>
+  </div>
+</div>
+
+</body>
+</html>
